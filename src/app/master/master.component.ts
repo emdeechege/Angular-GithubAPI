@@ -26,17 +26,17 @@ export class MasterComponent implements OnInit {
     });
 
     searchUser() {
-      this.apiService.updateUser(this.userName);
+      this.apiservice.updateUser(this.userName);
 
-      this.apiService.apiProfile()
+      this.apiservice.getUserDetails()
         .subscribe(users => {
-          //console.log(res)
+
           this.user1 = users;
         })
 
-      this.apiService.getRepos()
+      this.apiservice.getRepos()
         .subscribe(result => {
-          //console.log(data)
+
           this.repos = result;
         })
     }
