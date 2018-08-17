@@ -15,10 +15,14 @@
   </div>
 </nav>
 <br>
-
-<input class="form-inline my-5 my-lg-0" name="search" placeholder="GitHub Search" #searchGit>
-<button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="searchUser(searchGit)">Search</button>
-
+<form>
+  <div class="form group">
+    <input class="form-control" name="search" #userName>
+    <button class="btn btn-outline-warning" (click)="performSearch(userName)">Search</button>
+    <!-- <input class="form-inline my-5 my-lg-0" name="userName" placeholder="GitHub Search" [(ngModel)]="userName" (keyup)="findUser()"> -->
+    <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="searchUser(searchGit)">Search</button> -->
+  </div>
+</form>
 
 <br>
 <!-- collect and show user data, by default shows me! -->
@@ -58,19 +62,19 @@
       {{user1.name}}
     </div>
     <div class="card-body">
-<div class="row" *ngFor='let repo of repos, let i=index'>
-        <div class="col-md-4" >
+      <div class="row" *ngFor='let repo of repos, let i=index'>
+        <div class="col-md-4">
           {{repos[i].name}}
+        </div>
+        <div class="col-md-4">
+          {{repos[i].pushed_at}}
+        </div>
+        <div class="col-md-4">
+          {{repos[i].forks_count}}
+        </div>
       </div>
-      <div class="col-md-4">
-        {{repos[i].pushed_at}}
-    </div>
-    <div class="col-md-4">
-      {{repos[i].forks_count}}
-  </div>
     </div>
   </div>
-</div>
 </div>
 
 <!-- <ul class="list-group list-group-flush" >
