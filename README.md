@@ -1,27 +1,37 @@
-# GitHub
+**About Github API app**
+##Github ApiService
+The site displays github data searches upon request using a Github API
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
 
-## Development server
+- Key in username you want to find on Github.
+- The cards will respond and display matching the username typed  
+- The profile avatar and brief details will be displayed in main card.
+- Repositories will be listed in card below.
+- click on interested repository in result to go to users repo.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### What we used
+This site was build using  
+1. `HTML`
+2. `CSS`
+3. `JavaScript`
+4. `jQuery`
+5. `Bootstrap`.
+6. `Angular 6`
+7. `TS`
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Click [here]() to see the site.
 
-## Build
+------------
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+#### Credits
 
-## Running unit tests
+emdeechege
+------------
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+License
+-------
 
-## Running end-to-end tests
+MIT License
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+2018
