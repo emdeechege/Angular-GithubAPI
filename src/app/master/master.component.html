@@ -17,8 +17,8 @@
 <br>
 <div class="form-group">
   <form class="form-inline my-2 my-lg-0">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <input class="form-control mr-sm-2" type="search" placeholder="GitHub Search" [(ngModel)]="userName" (keyup)="searchUser()" #searchGit>
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="searchUser(searchGit)">Search</button>
   </form>
 
 </div>
@@ -45,26 +45,26 @@
             <li class="list-group-item">user name: {{user1.login}}</li>
             <li class="list-group-item" *ngIf="location">Location: {{user1.location}}</li>
             <li class="list-group-item" *ngIf="email">Email:{{user1.email}}</li>
-            <li class="list-group-item" >URL: <a href="{{user1.html_url}}" target="_blank">{{user1.html_url}}</a></li>
+            <li class="list-group-item">URL: <a href="{{user1.html_url}}" target="_blank">{{user1.html_url}}</a></li>
             <li class="list-group-item">Member Since: {{user1.created_at}}</li>
           </ul>
         </div>
       </div>
     </div>
   </div>
-<!-- show repo details of users after the search -->
-<div class="card">
+  <!-- show repo details of users after the search -->
   <div class="card">
-    <div class="card-header">
-      {{user1.name}}({{user1.login}})
-      <span class="badge">{{user1.public_repos}} Public Repos</span>
+    <div class="card">
+      <div class="card-header">
+        {{user1.name}}({{user1.login}})
+        <span class="badge">{{user1.public_repos}} Public Repos</span>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul>
     </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
-  </ul>
-</div>
 
 
 
@@ -75,8 +75,4 @@
 
 
 
-
-
-
-
-</div>
+  </div>

@@ -24,25 +24,8 @@ export class MasterComponent implements OnInit {
       this.user1 = result;
       console.log(this.user1);
     });
-
-    searchUser() {
-      this.apiservice.updateUser(this.userName);
-
-      this.apiservice.getUserDetails()
-        .subscribe(users => {
-
-          this.user1 = users;
-        })
-
-      this.apiservice.getRepos()
-        .subscribe(result => {
-
-          this.repos = result;
-        })
-    }
-  }
+}
   ngOnInit() {
 
   }
-
 }
