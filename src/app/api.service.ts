@@ -5,9 +5,6 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiService {
-  updateUser(arg0: any): any {
-    throw new Error("Method not implemented.");
-  }
 userName: string;
 apiUrl: string="https://api.github.com/users/";
 apiKey: string="1abd407493bf913907152b8557d281e9a561807a"

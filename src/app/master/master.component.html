@@ -15,13 +15,11 @@
   </div>
 </nav>
 <br>
-<div class="form-group">
-  <form class="form-inline my-2 my-lg-0">
-    <input class="form-control mr-sm-2" type="search" placeholder="GitHub Search" [(ngModel)]="userName" (keyup)="searchUser()" #searchGit>
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="searchUser(searchGit)">Search</button>
-  </form>
 
-</div>
+<input class="form-control mr-sm-2" name="search" placeholder="GitHub Search" #searchGit>
+<button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="searchUser(searchGit)">Search</button>
+
+
 <br>
 <!-- collect and show user data, by default shows me! -->
 <div class="container">
@@ -60,9 +58,9 @@
         <span class="badge">{{user1.public_repos}} Public Repos</span>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Vestibulum at eros</li>
+        <li class="list-group-item"></li>
+        <li class="list-group-item"></li>
+        <li class="list-group-item"></li>
       </ul>
     </div>
 
