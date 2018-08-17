@@ -55,30 +55,25 @@
   <!-- show repo details of users after the search -->
   <div class="card">
     <div class="row">
-          <div class="col-md-">
-            {{user1.name}}
-        <div class="first">
-          <span class="badge">{{user1.public_repos}} Public Repos</span>
-        </div>
-        <br>
-        <div class="col-md-">
-        <ul class="list-group list-group-flush" *ngFor='let repo of repos, let i=index'>
-          <li class="list-group-item">{{repos[i].name}}</li>
-          <li class="list-group-item">{{repos[i].pushed_at}}</li>
-          <li class="list-group-item">{{repos[i].forks_count}}</li>
-        </ul>
+      {{user1.name}}
+      <span class="badge">{{user1.public_repos}} Public Repos</span>
+    </div>
+<div class="row" *ngFor='let repo of repos, let i=index'>
+        <div class="col-md-4" >
+          {{repos[i].name}}
       </div>
+      <div class="col-md-4">
+        {{repos[i].pushed_at}}
+    </div>
+    <div class="col-md-4">
+      {{repos[i].forks_count}}
+  </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
 </div>
+
+<!-- <ul class="list-group list-group-flush" >
+  <li class="list-group-item">{{repos[i].name}}</li>
+  <li class="list-group-item">{{repos[i].pushed_at}}</li>
+  <li class="list-group-item">{{repos[i].forks_count}}</li>
+</ul> -->
