@@ -29,7 +29,7 @@ export class MasterComponent implements OnInit {
   }
 
   performSearch(userName: HTMLInputElement): void {//collects user data and adds the input the the api link and returns a new variable with the results. The results overide the trending gifs automatically.
-      var apiLink = (this.apiUrl + userName + "?access_token=" + this.apiKey);
+      var apiLink = (this.apiUrl + userName.value + "?access_token=" + this.apiKey);
 
       this.http.get(apiLink).subscribe(response =>{
           this.user1 = response;
