@@ -20,9 +20,9 @@ export class MasterComponent implements OnInit {
       this.user1 = users;
       console.log(this.user1);
     });
-    this.apiservice.getRepos().subscribe(result => {
-      this.repos = result;
-      console.log(this.user1);
+    this.apiservice.getRepos().subscribe(data => {
+      this.repos = data;
+      console.log(this.repos);
     });
 
     // searchUser() {

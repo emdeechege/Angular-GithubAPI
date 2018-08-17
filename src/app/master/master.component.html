@@ -16,7 +16,7 @@
 </nav>
 <br>
 
-<input class="form-control mr-sm-2" name="search" placeholder="GitHub Search" #searchGit>
+<input class="form-inline my-5 my-lg-0" name="search" placeholder="GitHub Search" #searchGit>
 <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="searchUser(searchGit)">Search</button>
 
 
@@ -50,27 +50,35 @@
       </div>
     </div>
   </div>
+  <br>
+  <br>
   <!-- show repo details of users after the search -->
   <div class="card">
-    <div class="card">
-      <div class="card-header">
-        {{user1.name}}({{user1.login}})
-        <span class="badge">{{user1.public_repos}} Public Repos</span>
+    <div class="row">
+          <div class="col-md-">
+            {{user1.name}}
+        <div class="first">
+          <span class="badge">{{user1.public_repos}} Public Repos</span>
+        </div>
+        <br>
+        <div class="col-md-">
+        <ul class="list-group list-group-flush" *ngFor='let repo of repos, let i=index'>
+          <li class="list-group-item">{{repos[i].name}}</li>
+          <li class="list-group-item">{{repos[i].pushed_at}}</li>
+          <li class="list-group-item">{{repos[i].forks_count}}</li>
+        </ul>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item"></li>
-        <li class="list-group-item"></li>
-        <li class="list-group-item"></li>
-      </ul>
     </div>
-
-
-
-
-
-
-
-
-
-
   </div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
