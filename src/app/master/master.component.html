@@ -23,7 +23,7 @@
 </div>
 <div class="container">
   <div class="card">
-    <div class="card-header" *ngIf="users">
+    <div class="card-header">
       {{user1.name}}
     </div>
     <div class="card-body">
@@ -42,11 +42,27 @@
             <li class="list-group-item">user name: {{user1.login}}</li>
             <li class="list-group-item" *ngIf="location">Location: {{user1.location}}</li>
             <li class="list-group-item" *ngIf="email">Email:{{user1.email}}</li>
-            <li class="list-group-item" *ngIf="email">Blog: {{user1.blog}}</li>
+            <li class="list-group-item" >URL: <a href="{{user1.html_url}}" target="_blank">{{user1.html_url}}</a></li>
             <li class="list-group-item">Member Since: {{user1.created_at}}</li>
           </ul>
         </div>
       </div>
     </div>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
