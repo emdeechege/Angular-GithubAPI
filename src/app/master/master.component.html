@@ -19,14 +19,13 @@
   <div class="form group">
     <input class="form-control" name="search" #userName>
     <button class="btn btn-outline-warning" (click)="performSearch(userName)">Search</button>
-    <!-- <input class="form-inline my-5 my-lg-0" name="userName" placeholder="GitHub Search" [(ngModel)]="userName" (keyup)="findUser()"> -->
-    <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="searchUser(searchGit)">Search</button> -->
+
   </div>
 </form>
 
 <br>
 <!-- collect and show user data, by default shows me! -->
-<div class="container">
+<div class="container-fluid">
   <div class="card">
     <div class="card-header">
       {{user1.name}}
@@ -47,7 +46,7 @@
             <li class="list-group-item">user name: {{user1.login}}</li>
             <li class="list-group-item" *ngIf="location">Location: {{user1.location}}</li>
             <li class="list-group-item" *ngIf="email">Email:{{user1.email}}</li>
-            <li class="list-group-item">URL: <a href="{{user1.html_url}}" target="_blank">{{user1.html_url}}</a></li>
+            <li class="list-group-item">URL: <a href="{{user1.html_url}}" target="_blank">View on Github</a></li>
             <li class="list-group-item">Member Since: {{user1.created_at}}</li>
           </ul>
         </div>

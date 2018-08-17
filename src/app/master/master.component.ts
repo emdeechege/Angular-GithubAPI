@@ -13,7 +13,7 @@ export class MasterComponent implements OnInit {
   user1: any = [];
   repos: any = [];
   userName: string;
-  apiUrl: string="https://api.github.com/users/";
+  apiUrl: string="https://api.github.com/u";
   apiKey: string="1abd407493bf913907152b8557d281e9a561807a"
 
   constructor(public apiservice: ApiService, public http: HttpClient) {
@@ -29,7 +29,7 @@ export class MasterComponent implements OnInit {
   }
 
   performSearch(userName: HTMLInputElement): void {//collects user data and adds the input the the api link and returns a new variable with the results. The results overide the trending gifs automatically.
-      var apiLink = (this.apiUrl + userName.value + "?access_token=" + this.apiKey);
+      var apiLink = (this.apiUrl + "userName" + "?access_token=" + this.apiKey);
 
       this.http.get(apiLink).subscribe(response =>{
           this.user1 = response;
