@@ -54,10 +54,10 @@
   <br>
   <!-- show repo details of users after the search -->
   <div class="card">
-    <div class="row">
+    <div class="card-header">
       {{user1.name}}
-      <span class="badge">{{user1.public_repos}} Public Repos</span>
     </div>
+    <div class="card-body">
 <div class="row" *ngFor='let repo of repos, let i=index'>
         <div class="col-md-4" >
           {{repos[i].name}}
@@ -70,6 +70,7 @@
   </div>
     </div>
   </div>
+</div>
 </div>
 
 <!-- <ul class="list-group list-group-flush" >
