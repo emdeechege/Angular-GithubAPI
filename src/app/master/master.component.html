@@ -6,29 +6,32 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="routerLink='/master' routerLinkActive='active'>">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" href="#">Repo</a>
       </li>
     </ul>
   </div>
-</nav>
-<br>
-<form>
-  <div class="form group">
-    <input class="form-control" name="userName" [(ngModel)]="userName" (keyup)="findUser()">
-    <button class="btn btn-outline-warning" (click)="findUser(userName)">Search</button>
+  <form class="form-inline my-2 my-lg-0">
+    <div class="form group">
+      <input class="form-control mr-sm-2" name="userName" [(ngModel)]="userName" (keyup)="findUser()">
+      <button class="btn-inline btn-outline-warning" (click)="findUser(userName)">Search</button>
 
-  </div>
-</form>
+    </div>
+  </form>
+</nav>
+<!-- End of Navigation -->
+<router-outlet></router-outlet>
+<br>
+
 
 <br>
 <!-- collect and show user data, by default shows me! -->
-<div class="container-fluid">
+<div class="container" id="repos.id">
   <div class="card">
     <div class="card-header">
-      {{user1.name}}
+    <h2>  {{user1.name}} </h2>
     </div>
     <div class="card-body">
       <div class="row">
@@ -47,7 +50,7 @@
             <li class="list-group-item" *ngIf="location">Location: {{user1.location}}</li>
             <li class="list-group-item" *ngIf="email">Email:{{user1.email}}</li>
             <li class="list-group-item">URL: <a href="{{user1.html_url}}" target="_blank">View on Github</a></li>
-            <li class="list-group-item">Member Since: {{user1.created_at}}</li>
+            <li class="list-group-item">Member Since: {{user1.created_at| date:short:timezone}}</li>
           </ul>
         </div>
       </div>
@@ -58,7 +61,8 @@
   <!-- show repo details of users after the search -->
   <div class="card">
     <div class="card-header">
-      {{user1.name}}
+      <h3>{{user1.login}} 's repositories</h3>
+      <small>{{user1.name}}</small>
     </div>
     <div class="card-body">
       <div class="row" *ngFor='let repo of repos, let i=index'>
@@ -66,7 +70,7 @@
           {{repos[i].name}}
         </div>
         <div class="col-md-4">
-          {{repos[i].pushed_at}}
+          {{repos[i].pushed_at| date:short:timezone}}
         </div>
         <div class="col-md-4">
           {{repos[i].forks_count}}
@@ -75,9 +79,3 @@
     </div>
   </div>
 </div>
-
-<!-- <ul class="list-group list-group-flush" >
-  <li class="list-group-item">{{repos[i].name}}</li>
-  <li class="list-group-item">{{repos[i].pushed_at}}</li>
-  <li class="list-group-item">{{repos[i].forks_count}}</li>
-</ul> -->
