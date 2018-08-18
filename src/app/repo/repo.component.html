@@ -1,3 +1,29 @@
-<p>
-  repo works!
-</p>
+<div class="container">
+<form class="form-inline my-2 my-lg-0">
+  <div class="form group">
+    <input class="form-control mr-sm-2" name="userName" [(ngModel)]="userName" (keyup)="findUser()">
+    <button class="btn-inline btn-outline-warning" (click)="findUser(userName)">Search</button>
+
+  </div>
+</form>
+
+  <div class="card">
+    <div class="card-header">
+      <h3>{{user1.login}} 's repositories</h3>
+      <small>{{user1.name}}</small>
+    </div>
+    <div class="card-body">
+      <div class="row" *ngFor='let repo of repos, let i=index'>
+        <div class="col-md-4">
+          {{repos[i].name}}
+        </div>
+        <div class="col-md-4">
+          {{repos[i].pushed_at| date:short:timezone}}
+        </div>
+        <div class="col-md-4">
+          {{repos[i].forks_count}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-repo',
@@ -7,9 +8,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RepoComponent implements OnInit {
 
-  constructor() { }
+  user1: any = [];
+  repos: any = [];
+  userName: string;
 
-  ngOnInit() {
+  constructor(public apiservice: ApiService) {
+    //obj data will return data from url called on by the fn defined in service
+    this.apiservice.getUserDetails().subscribe(users => {
+      this.user1 = users;
+      console.log(this.user1);
+    });
+    this.apiservice.getRepos().subscribe(result => {
+      this.repos = result;
+      console.log(this.repos);
+    });
   }
 
-}
+  findUser() {
+    this.apiservice.updateUserName(this.userName);
+    this.apiservice.getUserDetails().subscribe(users => {
+      this.user1 = users;
+      console.log(this.user1);
+    });
+    this.apiservice.getRepos().subscribe(result => {
+      this.repos = result;
+      console.log(this.repos);
+    });
+  }
+
+  ngOnInit() {
+
+  }
+
+  }

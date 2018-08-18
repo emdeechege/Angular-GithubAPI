@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
-import { HttpClient } from '@angular/common/http'
+
 
 
 @Component({
@@ -14,7 +14,7 @@ export class MasterComponent implements OnInit {
   repos: any = [];
   userName: string;
 
-  constructor(public apiservice: ApiService, public http: HttpClient) {
+  constructor(public apiservice: ApiService) {
     //obj data will return data from url called on by the fn defined in service
     this.apiservice.getUserDetails().subscribe(users => {
       this.user1 = users;

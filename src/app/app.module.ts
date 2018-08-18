@@ -8,11 +8,8 @@ import { AppComponent } from './app.component';
 import { MasterComponent } from './master/master.component';
 import { ApiService } from './api.service';
 import { RepoComponent } from './repo/repo.component'
+import { RoutingModule } from './routing/routing.module'
 
-const routes:Routes=[
-{ path: "home", component: MasterComponent },
-{path:'repos/:id',component:MasterComponent}
-]
 
 
 @NgModule({
@@ -25,7 +22,7 @@ const routes:Routes=[
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RoutingModule,
 
   ],
   providers: [ApiService],
