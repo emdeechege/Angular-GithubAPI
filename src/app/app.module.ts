@@ -6,7 +6,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { MasterComponent } from './master/master.component';
-import { ApiService } from './api.service'
+import { ApiService } from './api.service';
+import { RepoComponent } from './repo/repo.component'
 
 const routes:Routes=[
 { path: "home", component: MasterComponent },
@@ -17,7 +18,8 @@ const routes:Routes=[
 @NgModule({
   declarations: [
     AppComponent,
-    MasterComponent
+    MasterComponent,
+    RepoComponent
   ],
   imports: [
     BrowserModule,
