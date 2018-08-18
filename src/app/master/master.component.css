@@ -1,1 +1,27 @@
 /* form-inline my-2 my-lg-0" */
+.badge{
+  padding: 15px;
+  margin: 10px;
+  }
+
+.card-header{
+  background-color:	#606060;
+  text-align: center;
+  color: white;
+    border: hidden;
+}
+
+.card-body{
+background-color: #dddddd;
+}
+
+.first {
+  background-color:	#606060;
+  text-align: center;
+  color: white;
+  border: hidden;
+}
+
+body {
+  background-color: black;
+}

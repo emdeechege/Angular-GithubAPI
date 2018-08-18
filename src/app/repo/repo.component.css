@@ -1,0 +1,20 @@
+.card-header {
+  background-color: #606060;
+  color: white;
+  text-align: center;
+}
+
+.body {
+  background-color: #dddddd;
+}
+
+.row {
+  padding: 6px;
+  border-bottom: 1px solid grey;
+  border-radius: 5px;
+  margin: 2px;
+}
+
+.col-md-4 {
+  text-align: center;
+}

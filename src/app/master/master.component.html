@@ -1,14 +1,19 @@
+<body>
+
+
+<br>
+<br>
+<br>
 <div class="container">
-<form class="form-inline my-2 my-lg-0">
+<form class="form-inline">
   <div class="form group">
-    <input class="form-control mr-sm-2" name="userName" [(ngModel)]="userName" (keyup)="findUser()">
+    <input class="form-control" name="userName" [(ngModel)]="userName" (keyup)="findUser()">
     <button class="btn-inline btn-outline-warning" (click)="findUser(userName)">Search</button>
 
   </div>
 </form>
 <br>
-
-
+<br>
 <br>
 <!-- collect and show user data, by default shows me! -->
 
@@ -23,16 +28,16 @@
         </div>
         <div class="col-md-8">
           <div class="first">
-            <span class="badge">{{user1.public_repos}} Public Repos</span>
-            <span class="badge">{{user1.followers}} Followers</span>
-            <span class="badge">{{user1.following}} Following</span>
+            <span class="badge badge-info">{{user1.public_repos}} Public Repos</span>
+            <span class="badge badge-info">{{user1.followers}} Followers</span>
+            <span class="badge badge-info">{{user1.following}} Following</span>
           </div>
           <br>
           <ul class="list-group">
             <li class="list-group-item">user name: {{user1.login}}</li>
             <li class="list-group-item" *ngIf="location">Location: {{user1.location}}</li>
             <li class="list-group-item" *ngIf="email">Email:{{user1.email}}</li>
-            <li class="list-group-item">URL: <a href="{{user1.html_url}}" target="_blank">View on Github</a></li>
+            <li class="list-group-item">URL: <a href="{{user1.html_url}}" target="_blank"><button class="btn-outline-info">View on Github</button></a></li>
             <li class="list-group-item">Member Since: {{user1.created_at| date:short:timezone}}</li>
           </ul>
         </div>
@@ -62,3 +67,4 @@
     </div>
   </div> -->
 </div>
+</body>
