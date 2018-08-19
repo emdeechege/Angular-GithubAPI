@@ -8,7 +8,9 @@ import { AppComponent } from './app.component';
 import { MasterComponent } from './master/master.component';
 import { ApiService } from './api.service';
 import { RepoComponent } from './repo/repo.component'
-import { RoutingModule } from './routing/routing.module'
+import { RoutingModule } from './routing/routing.module';
+import { HighlightDirective } from './highlight.directive';
+
 
 
 
@@ -16,7 +18,9 @@ import { RoutingModule } from './routing/routing.module'
   declarations: [
     AppComponent,
     MasterComponent,
-    RepoComponent
+    RepoComponent,
+    HighlightDirective,
+    
   ],
   imports: [
     BrowserModule,
