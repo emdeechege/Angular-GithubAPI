@@ -15,7 +15,7 @@ export class MasterComponent implements OnInit {
   userName: string;
 
   constructor(public apiservice: ApiService, private router: Router) {
-    //obj data will return data from url called on by the fn defined in service
+
     this.apiservice.getUserDetails().subscribe(users => {
       this.user1 = users;
       console.log(this.user1);

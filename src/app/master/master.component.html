@@ -5,14 +5,14 @@
   <div class="container">
     <div id="swara">
       <form class="form">
-        <input class="form-control" type="search" placeholder="Search by name" aria-label="Search by name" name="userName" [(ngModel)]="userName" (keyup)="findUser()">
-        <!-- <button class="btn btn-outline-info " (click)="findUser(userName)">Search</button> -->
+        <input type="text" class="form-control" placeholder="Search Username" [(ngModel)]="userName" name="userName" (keyup)="findUser()">
+
       </form>
     </div>
     <br>
     <br>
 
-    <div class="card">
+    <div class="card" *ngIf="user1">
       <div class="card-header">
         <h2>  {{user1.name}} </h2>
       </div>
@@ -30,10 +30,10 @@
             <br>
             <ul class="list-group">
               <li class="list-group-item" appHighlight><strong>user name:</strong> {{user1.login}}</li>
-              <!-- <li class="list-group-item" *ngIf="location"><strong>Location: </strong>{{user1.location}}</li>
-              <li class="list-group-item" *ngIf="email"><strong>Email:</strong>{{user1.email}}</li> -->
+              <li class="list-group-item" *ngIf="location"><strong>Location: </strong>{{user1.location}}</li>
+              <li class="list-group-item" *ngIf="email"><strong>Email:</strong>{{user1.email}}</li>
               <li class="list-group-item"><strong>URL:  </strong> <a href="{{user1.html_url}}" target="_blank"><button class="btn-outline-info">View on Github</button></a></li>
-              <!-- <li class="list-group-item" appHighlight><strong>Member Since: </strong>{{user1.created_at |  date : short : timezone}}</li> -->
+              <li class="list-group-item" appHighlight><strong>Member Since: </strong>{{user1.created_at| date:short:timezone}}</li>
             </ul>
           </div>
         </div>

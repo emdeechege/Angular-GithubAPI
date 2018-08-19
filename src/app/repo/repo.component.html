@@ -6,14 +6,14 @@
   <div class="container">
     <div id="swara">
       <form class="form" >
-        <input class="form-control mr-sm-2" type="search" placeholder="Search by name" aria-label="Search by name" name="userName" [(ngModel)]="userName" (keyup)="findUser()" >
+        <input type="text" class="form-control" placeholder="Search Username" [(ngModel)]="userName" name="userName" (keyup)="findUser()">
         <!-- <button class="btn btn-outline-info my-2 my-sm-0" (click)="findUser(userName)">Search</button> -->
       </form>
     </div>
     <br>
     <br>
 
-    <div class="card">
+    <div class="card" *ngIf="user1">
       <div class="card-header">
         <h3>{{user1.login}} 's repositories</h3>
         <small>{{user1.name}}</small>

@@ -21,7 +21,7 @@ export class RepoComponent implements OnInit {
       this.repos = result;
       console.log(this.repos);
     });
-    }
+  }
 
   findUser() {
     this.apiservice.updateUserName(this.userName);
@@ -39,4 +39,4 @@ export class RepoComponent implements OnInit {
 
   }
 
-  }
+}
