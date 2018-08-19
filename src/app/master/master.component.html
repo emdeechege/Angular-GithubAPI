@@ -1,21 +1,16 @@
 <body>
-
-
 <br>
 <br>
-<br>
+<h1 style="color:white" align="center">GitHub Profile</h1>
 <div class="container">
-<form class="form-inline">
-  <div class="form group">
-    <input class="form-control" name="userName" [(ngModel)]="userName" (keyup)="findUser()">
-    <button class="btn-inline btn-outline-warning" (click)="findUser(userName)">Search</button>
-
-  </div>
-</form>
+  <div id="swara">
+  <form class="form">
+    <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="userName" [(ngModel)]="userName" (keyup)="findUser()">
+    <!-- <button class="btn btn-outline-info " (click)="findUser(userName)">Search</button> -->
+  </form>
+</div>
 <br>
 <br>
-<br>
-<!-- collect and show user data, by default shows me! -->
 
   <div class="card">
     <div class="card-header">
@@ -46,25 +41,6 @@
   </div>
   <br>
   <br>
-  <!-- show repo details of users after the search -->
-  <!-- <div class="card" id="repos.id">
-    <div class="card-header">
-      <h3>{{user1.login}} 's repositories</h3>
-      <small>{{user1.name}}</small>
-    </div>
-    <div class="card-body">
-      <div class="row" *ngFor='let repo of repos, let i=index'>
-        <div class="col-md-4">
-          {{repos[i].name}}
-        </div>
-        <div class="col-md-4">
-          {{repos[i].pushed_at| date:short:timezone}}
-        </div>
-        <div class="col-md-4">
-          {{repos[i].forks_count}}
-        </div>
-      </div>
-    </div>
-  </div> -->
+
 </div>
 </body>

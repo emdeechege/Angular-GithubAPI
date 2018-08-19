@@ -13,7 +13,6 @@ export class RepoComponent implements OnInit {
   userName: string;
 
   constructor(public apiservice: ApiService) {
-    //obj data will return data from url called on by the fn defined in service
     this.apiservice.getUserDetails().subscribe(users => {
       this.user1 = users;
       console.log(this.user1);
@@ -22,7 +21,7 @@ export class RepoComponent implements OnInit {
       this.repos = result;
       console.log(this.repos);
     });
-  }
+    }
 
   findUser() {
     this.apiservice.updateUserName(this.userName);

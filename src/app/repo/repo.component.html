@@ -1,36 +1,37 @@
-<br>
-<br>
-<br>
-<div class="container">
-  <form class="form-inline">
-    <div class="form group">
-      <input class="form-control" name="userName" [(ngModel)]="userName" (keyup)="findUser()">
-      <button class="btn-inline btn-outline-warning" (click)="findUser(userName)">Search</button>
+<body>
 
+  <br>
+  <br>
+  <h1 style="color:white" align="center">GitHub Repositories</h1>
+  <div class="container">
+    <div id="swara">
+      <form class="form" >
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="userName" [(ngModel)]="userName" (keyup)="findUser()" >
+        <!-- <button class="btn btn-outline-info my-2 my-sm-0" (click)="findUser(userName)">Search</button> -->
+      </form>
     </div>
-  </form>
-  <br>
-  <br>
-  <br>
+    <br>
+    <br>
 
-  <div class="card">
-    <div class="card-header">
-      <h3>{{user1.login}} 's repositories</h3>
-      <small>{{user1.name}}</small>
-    </div>
-    <div class="card-body">
-      <div class="row" *ngFor='let repo of repos, let i=index'>
-        <div class="col-md-4">
-          {{repos[i].name}}
-        </div>
-        <div class="col-md-4">
-          {{repos[i].pushed_at| date:short:timezone}}
-        </div>
-        <div class="col-md-4">
-          <a href="{{repos[i].html_url}}" target="_blank"><button class="btn-inline btn-outline-info">View on Github</button></a>
-        </div>
+    <div class="card">
+      <div class="card-header">
+        <h3>{{user1.login}} 's repositories</h3>
+        <small>{{user1.name}}</small>
       </div>
-      <br>
+      <div class="card-body">
+        <div class="row" *ngFor='let repo of repos, let i=index'>
+          <div class="col-md-4">
+            {{repos[i].name}}
+          </div>
+          <div class="col-md-4">
+            {{repos[i].pushed_at| date:short:timezone}}
+          </div>
+          <div class="col-md-4">
+            <a href="{{repos[i].html_url}}" target="_blank"><button class="btn-inline btn-outline-info">View on Github</button></a>
+          </div>
+        </div>
+        <br>
+      </div>
     </div>
   </div>
-</div>
+</body>

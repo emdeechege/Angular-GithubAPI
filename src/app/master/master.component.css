@@ -1,27 +1,40 @@
 /* form-inline my-2 my-lg-0" */
-.badge{
+
+.badge {
   padding: 15px;
   margin: 10px;
-  }
-
-.card-header{
-  background-color:	#606060;
-  text-align: center;
-  color: white;
-    border: hidden;
 }
 
-.card-body{
-background-color: #dddddd;
+.card-header {
+  background-color: #606060;
+  text-align: center;
+  color: white;
+  border: none;
+}
+
+.card-body {
+  background-color: #dddddd;
 }
 
 .first {
-  background-color:	#606060;
+  background-color: #606060;
   text-align: center;
   color: white;
   border: hidden;
 }
 
 body {
-  background-color: black;
+  /* background-color: black; */
+  background-image: url('/assets/images.jpg');
 }
+
+#swara {
+    margin: auto;
+    width: 60%;
+    border: 0px solid #73AD21;
+    padding: 10px;
+}
+
+/* .form-inline {
+  width:40%;
+} */

@@ -4,8 +4,9 @@
   text-align: center;
 }
 
-.body {
-  background-color: #dddddd;
+body {
+  /* background-color: #dddddd; */
+  background-image: url('/assets/images.jpg');
 }
 
 .row {
@@ -17,4 +18,11 @@
 
 .col-md-4 {
   text-align: center;
+}
+
+#swara {
+    margin: auto;
+    width: 60%;
+    border: 0px solid #73AD21;
+    padding: 10px;
 }
