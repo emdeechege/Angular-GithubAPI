@@ -8,8 +8,8 @@ import { ApiService } from '../api.service';
 })
 export class RepoComponent implements OnInit {
 
-  user1: any = [];
-  repos: any = [];
+  user1;
+  repos;
   userName: string;
 
   constructor(public apiservice: ApiService) {

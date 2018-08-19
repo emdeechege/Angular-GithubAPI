@@ -10,8 +10,8 @@ import { Router } from '@angular/router';
 })
 export class MasterComponent implements OnInit {
 
-  user1: any = [];
-  repos: any = [];
+  user1;
+  repos;
   userName: string;
 
   constructor(public apiservice: ApiService, private router: Router) {

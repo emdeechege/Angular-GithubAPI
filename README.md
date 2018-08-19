@@ -1,12 +1,12 @@
 **About Github API app**
+
 ##Github ApiService
 The site displays github data searches upon request using a Github API
 
-
 - Key in username you want to find on Github.
-- The cards will respond and display matching the username typed  
-- The profile avatar and brief details will be displayed in main card.
-- Repositories will be listed in card below.
+- If you are on home page it responds and displays the username typed .
+- If on repo page you see the repositories of the user searched for.
+- The profile in the home page.
 - click on interested repository in result to go to users repo.
 
 ### What we used
