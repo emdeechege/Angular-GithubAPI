@@ -1,11 +1,12 @@
 **About Github API app**
 
-###Getting Started
+### Getting Started
+
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ------------
 
-###Prerequisites
+### Prerequisites
 
 You will need to:
 
@@ -13,7 +14,7 @@ You will need to:
 - Have a web browser
 - Any text editor
 
-###Development server
+### Development server
 
 Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
