@@ -1,46 +1,46 @@
 <body>
-<br>
-<br>
-<h1 style="color:white" align="center">GitHub Profile</h1>
-<div class="container">
-  <div id="swara">
-  <form class="form">
-    <input class="form-control" type="search" placeholder="Search by name" aria-label="Search by name" name="userName" [(ngModel)]="userName" (keyup)="findUser()">
-    <!-- <button class="btn btn-outline-info " (click)="findUser(userName)">Search</button> -->
-  </form>
-</div>
-<br>
-<br>
-
-  <div class="card">
-    <div class="card-header">
-    <h2>  {{user1.name}} </h2>
+  <br>
+  <br>
+  <h1 style="color:white" align="center">GitHub Profile</h1>
+  <div class="container">
+    <div id="swara">
+      <form class="form">
+        <input class="form-control" type="search" placeholder="Search by name" aria-label="Search by name" name="userName" [(ngModel)]="userName" (keyup)="findUser()">
+        <!-- <button class="btn btn-outline-info " (click)="findUser(userName)">Search</button> -->
+      </form>
     </div>
-    <div class="card-body">
-      <div class="row">
-        <div class="col-md-4">
-          <img class="img-thumbnail" src="{{user1.avatar_url}}">
-        </div>
-        <div class="col-md-8">
-          <div class="first">
-            <span class="badge badge-info">{{user1.public_repos}} Public Repos</span>
-                      <span class="badge badge-info">{{user1.followers}} Followers</span>
-            <span class="badge badge-info">{{user1.following}} Following</span>
+    <br>
+    <br>
+
+    <div class="card">
+      <div class="card-header">
+        <h2>  {{user1.name}} </h2>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-4">
+            <img class="img-thumbnail" src="{{user1.avatar_url}}">
           </div>
-          <br>
-          <ul class="list-group">
-            <li class="list-group-item" appHighlight><strong>user name:</strong> {{user1.login}}</li>
-            <li class="list-group-item" *ngIf="location"><strong>Location: </strong>{{user1.location}}</li>
-            <li class="list-group-item" *ngIf="email"><strong>Email:</strong>{{user1.email}}</li>
-            <li class="list-group-item"><strong>URL:  </strong> <a href="{{user1.html_url}}" target="_blank"><button class="btn-outline-info">View on Github</button></a></li>
-            <li class="list-group-item" appHighlight><strong>Member Since: </strong>{{user1.created_at| date:short:timezone}}</li>
-          </ul>
+          <div class="col-md-8">
+            <div class="first">
+              <span class="badge badge-info">{{user1.public_repos}} Public Repos</span>
+              <span class="badge badge-info">{{user1.followers}} Followers</span>
+              <span class="badge badge-info">{{user1.following}} Following</span>
+            </div>
+            <br>
+            <ul class="list-group">
+              <li class="list-group-item" appHighlight><strong>user name:</strong> {{user1.login}}</li>
+              <!-- <li class="list-group-item" *ngIf="location"><strong>Location: </strong>{{user1.location}}</li>
+              <li class="list-group-item" *ngIf="email"><strong>Email:</strong>{{user1.email}}</li> -->
+              <li class="list-group-item"><strong>URL:  </strong> <a href="{{user1.html_url}}" target="_blank"><button class="btn-outline-info">View on Github</button></a></li>
+              <!-- <li class="list-group-item" appHighlight><strong>Member Since: </strong>{{user1.created_at |  date : short : timezone}}</li> -->
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <br>
-  <br>
+    <br>
+    <br>
 
-</div>
+  </div>
 </body>
