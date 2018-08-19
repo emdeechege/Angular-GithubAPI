@@ -1,6 +1,6 @@
 **About Github API app**
 
-##Github ApiService
+### GITHUB API
 The site displays github data searches upon request using a Github API
 
 - Key in username you want to find on Github.
@@ -20,7 +20,7 @@ This site was build using
 7. `TS`
 
 
-Click [here]() to see the site.
+Visit the page using this link: https://emdeechege.github.io/Angular-GithubAPI/
 
 ------------
 
