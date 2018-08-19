@@ -2,7 +2,6 @@
 ###Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-<<<<<<< HEAD
 ###Prerequisites
 You will need to:
 
@@ -15,7 +14,7 @@ Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will 
 ###Github ApiService
 =======
 ### GITHUB API
->>>>>>> a6adc681c10b81a6d97c1978d9a7c6cc386555d0
+
 The site displays github data searches upon request using a Github API
 
 - Key in username you want to find on Github.
@@ -34,14 +33,11 @@ This site was build using
 6. `Angular 6`
 7. `TS`
 
-<<<<<<< HEAD
 =======
 
 Visit the page using this link: https://emdeechege.github.io/Angular-GithubAPI/
 
 ------------
-
->>>>>>> a6adc681c10b81a6d97c1978d9a7c6cc386555d0
 #### Credits
 emdeechege
 ------------
